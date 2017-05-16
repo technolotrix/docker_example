@@ -38,8 +38,7 @@ class BaseDriver():
         if self.browser == "chrome":
             self.driver = webdriver.Remote(
                 '/usr/bin/chromedriver',
-                command_executor=APP_SETTINGS.COMMAND_EXECUTOR,
-                desired_capabilities=DesiredCapabilities.CHROME)
+                command_executor=APP_SETTINGS.COMMAND_EXECUTOR)
 
         if self.browser == "phantomjs":
             self.driver = webdriver.Remote(
