@@ -1,3 +1,15 @@
+# Mac
+.DS_Store
+
+# Chromedriver binary
+chromedriver
+
+# Environ
+env/
+
+# Secrets
+secrets.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
