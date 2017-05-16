@@ -32,18 +32,18 @@ class BaseDriver():
 
         if self.browser == "firefox":
             self.driver = webdriver.Remote(
-                command_executor='http://172.17.0.3:5555/wd/hub',#APP_SETTINGS.COMMAND_EXECUTOR,
+                command_executor=APP_SETTINGS.COMMAND_EXECUTOR,
                 desired_capabilities=DesiredCapabilities.FIREFOX)
 
         if self.browser == "chrome":
             self.driver = webdriver.Remote(
-                command_executor='http://172.17.0.4:5555/wd/hub',#APP_SETTINGS.COMMAND_EXECUTOR,
+                command_executor=APP_SETTINGS.COMMAND_EXECUTOR,
                 desired_capabilities=DesiredCapabilities.CHROME)
 
-        # if self.browser == "phantomjs":
-        #     self.driver = webdriver.Remote(
-        #         command_executor=APP_SETTINGS.COMMAND_EXECUTOR,
-        #         desired_capabilities=DesiredCapabilities.PHANTOMJS)
+        if self.browser == "phantomjs":
+            self.driver = webdriver.Remote(
+                command_executor=APP_SETTINGS.COMMAND_EXECUTOR,
+                desired_capabilities=DesiredCapabilities.PHANTOMJS)
 
     def set_window_size(self):
         self.driver.implicitly_wait(WAIT)

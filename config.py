@@ -7,7 +7,7 @@ class Config(object):
     DEBUG = False
     BROWSER = "chrome"
     LOCAL_SELENIUM = False
-    #COMMAND_EXECUTOR = os.environ['IP']
+    COMMAND_EXECUTOR = '172.17.0.2:4444/wd/hub'
 
 
 class DevelopmentConfig(Config):
